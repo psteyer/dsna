@@ -69,10 +69,43 @@ class Linklist:
             current_node = current_node.pointer
         current_node.pointer = node
 
-    def delete():
-        pass
+    def delete(self, data):
+	"""
+	Delete a node
+	
+	Figure out if it's head, mid, tail
+	
+	params:
+		input is some data, we find the node, delete it if it's there
+	return:
+		could be static (does not return anything)
+		could return a bool (true or false)
+	
+	"""
 
-    
+	current_node = self.head_node
+
+	# HEAD NODE:
+	# if the data is  equal to our current node
+	if current_node.data == data
+	    # self references the instance - and of the instance attributes are available in self
+	    # whatever is on the left we assign too, and whatever is on the right is whatever we are going to assign it too.
+	    self.head_node = current_node.pointer
+	# SOMEWHERE IN THE MIDDLE NODE:
+	# does my current node have a child, does that child have a child, if yes - continue to do something
+	while current_node.pointer.pointer:
+	    if current_node.pointer.data == data:
+		current_node.pointer = currnet_node.pointer.pointer
+	        return True
+	# TAIL NODE:
+	# is my next nodes data == to the data i passed in
+	if current_node.pointer.data == data:
+	   # set the reference of the current node (the next node) to none, aka tail
+	   current_node.pointer = None
+	   return True
+
+	return False
+
     def update(self, data, new_data):
         """
         Search for a value inside of the link list, and set that value to a new value
