@@ -69,6 +69,27 @@ class Linklist:
             current_node = current_node.pointer
         current_node.pointer = node
 
+
+        """
+        # setting current_node to head node (which has data, and a ref to the next node)
+        current_node = self.head_node
+
+        # While current node has a next node, set current node to then next node. If the current node does not have a next node, bomb out since it's none
+        
+        # While my current_node has a reference to another node
+        while current_node.pointer:
+            # I will set my current node variable to the reference of my current node WHICH is the next node
+            current_node = current_node.pointer
+        # When we reached the end of the list, we will be setting the reference of current node (which was none at first) to a new instantiation of node
+        current_node.pointer = node
+        """
+
+
+
+
+
+
+
     def delete(self, data):
 	"""
 	Delete a node
